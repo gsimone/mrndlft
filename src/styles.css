@@ -116,3 +116,9 @@ canvas {
     transform: translateX(42.5%);
   }
 }
+
+.title-w {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+}

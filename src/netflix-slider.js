@@ -62,8 +62,12 @@ class NetflixSlider {
         child.classList.toggle("active", i === activeIndex);
         child.classList.toggle("after", i > activeIndex);
       });
+
+      this.onChange(this.isMobile ? this.activeY : this.activeX)
     });
   }
+  
+onChange() { }
 
   init() {
     this.bindEvents();
