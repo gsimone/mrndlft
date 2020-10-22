@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+      }
+
+      body,
+      .overview {
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      body {
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+.overview {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Grid Scale */
+.grid {
+  display: flex;
+
+  z-index: 1;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.link {
+  position: relative;
+  display: block;
+  transition: transform 500ms;
+}
+
+/* WebGL Rollover */
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.link img {
+  display: none;
+}
+
+.grid img {
+  width: 100%;
+}
+
+.grid > * {
+  position: relative;
+  z-index: 1;
+  transition: transform 500ms;
+  transform-origin: 100% 50%;
+}
+
+.grid .numb {
+  font-size: 13vw;
+  font-family: "Maelstrom Sans Test", sans-serif;
+  line-height: 12vw;
+  display: block;
+  color: #222;
+}
+
+.active {
+  transform: scale(1.85);
+}
+
+.before {
+  transform: translateY(-42.5%);
+}
+
+.after {
+  transform: translateY(42.5%);
+}
+
+@media screen and (min-width: 800px) {
+  .overview {
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .grid {
+    flex-direction: row;
+  }
+
+  .grid > * {
+    transform-origin: center bottom;
+    width: 11%;
+    padding-right: 0.6vw;
+  }
+
+  .before {
+    transform: translateX(-42.5%);
+  }
+
+  .after {
+    transform: translateX(42.5%);
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="overview">
+      <div class="grid">
+        <div class="link">
+          <div class="numb">1</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/random/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">2</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">3</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/3/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">4</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/4/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">5</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/5/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">6</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/6/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">7</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/7/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">8</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/8/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+        <div class="link">
+          <div class="numb">9</div>
+          <div class="img w-embed">
+            <img
+              class="content__img"
+              src="https://picsum.photos/seed/9/1080/1350"
+              crossorigin="anonymous"
+              alt="img0"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dbb8d3a0d3f7fa83cc_three.min.txt"></script>
+    <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11dab8d3a0a088fa83c8_TweenLite.min.txt"></script>
+    <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11daf8881a5af4531765_Math.txt"></script>
+    <script src="https://uploads-ssl.webflow.com/5dae0e06b8d3a0d097fa5f9e/5dae11f6c287237662327a19_imagesloaded.pkgd.txt"></script>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
