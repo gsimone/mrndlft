@@ -19,6 +19,12 @@ preloadImages().then(() => {
 
   const titles = Array.from(document.querySelectorAll('.title-w .w-dyn-item'))
 
+  effect.isMobile = window.innerWidth < 800
+  window.addEventListener("resize", () => {
+    effect.isMobile = window.innerWidth < 800
+    console.log(effect)
+  });
+  
   slider.onChange = (activeIndex) => {
     titles.forEach((title, i) => {
       title.classList.toggle("active", activeIndex === i)

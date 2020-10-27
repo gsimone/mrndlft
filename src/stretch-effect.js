@@ -70,7 +70,6 @@ class StretchEffect extends EffectShell {
     this.plane = new THREE.Mesh(this.geometry, this.material);
     this.scene.add(this.plane);
 
-    this.isMobile = true
     this.reset();
   }
 
