@@ -57,14 +57,6 @@ canvas {
   pointer-events: none;
 }
 
-.link img {
-  display: none;
-}
-
-.grid img {
-  width: 100%;
-}
-
 .grid > * {
   position: relative;
   z-index: 1;

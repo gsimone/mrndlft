@@ -139,6 +139,7 @@ class EffectShell {
     const relY = event.touches[0].clientY - containerBox.y;
     const percentY = relY / containerBox.height;
     const activeY = Math.floor(this.items.length * percentY);
+    this.onTargetChange(activeY)    
   }
 
   _onMouseMove(event) {

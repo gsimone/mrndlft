@@ -70,6 +70,7 @@ class StretchEffect extends EffectShell {
     this.plane = new THREE.Mesh(this.geometry, this.material);
     this.scene.add(this.plane);
 
+    this.isMobile = true
     this.reset();
   }
 
@@ -122,6 +123,11 @@ class StretchEffect extends EffectShell {
 
   onMouseMove(event) {
     if (this.isMouseOver) {
+
+      if (this.isMobile) {
+        return
+      }
+
       // project mouse position to world coodinates
       let x = this.mouse.x.map(
         -1,
@@ -141,6 +147,7 @@ class StretchEffect extends EffectShell {
 
       // update position
       this.position = new THREE.Vector3(x, y + OFFSET, 0);
+      
       TweenLite.to(this.plane.position, 1, {
         x: x,
         y: y + OFFSET,
@@ -156,6 +163,7 @@ class StretchEffect extends EffectShell {
       .clone()
       .sub(this.position)
       .multiplyScalar(-this.options.strength);
+      
     this.uniforms.uOffset.value = offset;
   }
 
