@@ -5,7 +5,7 @@ function clamp(n, min, max) {
 class NetflixSlider {
   constructor(container) {
     this.container = container;
-    this.activeX = 0;
+    this.activeX = this.activeY = 0;
     this.childrenArr = Array.from(this.container.children);
     this.handleResize();
   }
