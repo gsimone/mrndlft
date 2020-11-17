@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "rm -rf dist && parcel build index.html"
+    "build": "rm -rf dist && parcel build index.html && cp src/home-effect.js dist/"
   },
   "dependencies": {},
   "devDependencies": {
