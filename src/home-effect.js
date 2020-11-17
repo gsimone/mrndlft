@@ -251,7 +251,9 @@ class GridToFullscreenEffect {
    */
   createOnMouseDown(itemIndex) {
     return ev => {
-      this.toFullscreen(itemIndex, ev);
+      if (ev.which === 1) {
+        this.toFullscreen(itemIndex, ev);
+      }
     };
   }
   /*
