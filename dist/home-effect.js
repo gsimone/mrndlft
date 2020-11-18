@@ -296,7 +296,7 @@ class GridToFullscreenEffect {
 
     const rect = this.itemsWrapper.children[
       this.currentImageIndex
-    ].children[0].getBoundingClientRect();
+    ].querySelector('figure').getBoundingClientRect();
     const mouseNormalized = {
       x: (ev.clientX - rect.left) / rect.width,
       // Allways invert Y coord
@@ -357,8 +357,6 @@ class GridToFullscreenEffect {
     this.currentImageIndex = itemIndex;
 
     this.recalculateUniforms(ev);
-
-    console.log("mousedown")
 
     if (this.textures[itemIndex]) {
       const textureSet = this.textures[itemIndex];
