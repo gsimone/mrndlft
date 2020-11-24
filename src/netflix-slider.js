@@ -11,7 +11,6 @@ class NetflixSlider {
   }
 
   handleResize() {
-    this.isMobile = window.innerWidth < 800;
     this.update();
   }
 
