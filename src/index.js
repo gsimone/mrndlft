@@ -13,9 +13,9 @@ slider.init();
 
 const titles = Array.from(document.querySelectorAll('.title-w .w-dyn-item'))
 
-effect.isMobile = slider.isMobile = window.innerWidth < 991
+effect.isMobile = window.innerWidth < 991
 window.addEventListener("resize", () => {
-  effect.isMobile = slider.isMobile = window.innerWidth < 991
+  effect.isMobile = window.innerWidth < 991
 });
 
 slider.onChange = (activeIndex) => {

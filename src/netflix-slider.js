@@ -7,6 +7,8 @@ class NetflixSlider {
     this.container = container;
     this.activeX = this.activeY = 0;
     this.childrenArr = Array.from(this.container.children);
+
+    this.isMobile = window.innerWidth < 991
     this.handleResize();
   }
 
