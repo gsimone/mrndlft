@@ -13,17 +13,9 @@ slider.init();
 
 const titles = Array.from(document.querySelectorAll('.title-w .w-dyn-item'))
 
-function is_touch_device() {  
-  try {  
-    document.createEvent("TouchEvent");  
-    return true;  
-  } catch (e) {  
-    return false;  
-  }  
-}
-effect.isMobile = is_touch_device()
+effect.isMobile = window.innerWidth < 991
 window.addEventListener("resize", () => {
-  effect.isMobile = is_touch_device()
+  effect.isMobile = window.innerWidth < 991
 });
 
 slider.onChange = (activeIndex) => {
