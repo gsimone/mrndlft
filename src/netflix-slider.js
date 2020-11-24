@@ -19,8 +19,8 @@ class NetflixSlider {
   }
 
   bindEvents() {
-    this.bindEvent("mousemove", this.handleMouseMove.bind(this));
-    this.bindEvent("touchmove", this.handleTouchMove.bind(this));
+    (!this.isMobile ? this.container : window).addEventListener("mousemove", this.handleMouseMove.bind(this));
+    (!this.isMobile ? this.container : window).addEventListener("touchmove", this.handleTouchMove.bind(this));
 
     window.addEventListener("resize", this.handleResize.bind(this));
   }
